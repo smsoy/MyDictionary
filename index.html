@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dectionary</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        h1{
+            color: rgb(248, 248, 31);
+            background-color: rgb(38, 25, 99);
+        }
+        body{
+            text-align: center;
+        }
+        table{
+            width: 100%;
+        }
+        td,th{
+            border: 2px solid rgb(255, 255, 255); background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>&#x2756; Dictionary &#x2756;</h1>
+        <div id="searchWrapper">
+        </div>
+        <ul id="charactersList"></ul>
+    </div>
+    <h1 style="color: rgba(18, 18, 27, 0.132);"></h1>
+    <input type="text" placeholder="search here.." id="myInput" onkeyup="searching()">
+    <div class="btn">
+       <<a href="#"><i class="fa fa-search"></i></a>>
+    </div>
+    <table id="myTable">
+        <tr>
+            <th>item no</th>
+            <th>words</th>
+            <th>translation</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Adversely</td>
+            <td>سلبي</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>ِAugment</td>
+            <td>زيادة</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Duress</td>
+            <td>إكراه</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Viable</td>
+            <td>قابل للحياة</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Determental</td>
+            <td>ضار</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Incorporate</td>
+            <td>يؤسس</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Contingent</td>
+            <td>طارئ</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Viability</td>
+            <td>جدوى</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Preceived</td>
+            <td>متصور</td>
+        </tr> 
+        <tr>
+            <td>10</td>
+            <td>Commensurate</td>
+            <td>متناسب</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Rampel</td>
+            <td>تكثيف</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Parish</td>
+            <td>الرعية</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Strive</td>
+            <td>فتنة</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Leverage</td>
+            <td>يستفيد</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Refrain</td>
+            <td>إقناع</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Impairement</td>
+            <td>ضعف</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Ordinaces</td>
+            <td>مراسيم</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Regulations</td>
+            <td>لوائح</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Business cessation</td>
+            <td>وقف الأعمال</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Adaptire capacity</td>
+            <td>القدرة على التكيف</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Compliance</td>
+            <td>إمتثال</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Comfirmity</td>
+            <td>مطابقة</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>The context</td>
+            <td>في سياق</td>
+        <tr>
+            <td>24</td>
+            <td>Accountability</td>
+            <td>المساءلة</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Liability</td>
+            <td>المسؤولية</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Adverse</td>
+            <td>معاكس</td>
+        </tr>
+        <tr>
+            <td>27</td>
+             <td>Prespective</td>
+             <td>منظور</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>Litigation</td>
+            <td>التقاضي</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Prescriptive</td>
+            <td>إلزامية</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Flux</td>
+            <td>تدفق</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>Prominent</td>
+            <td>بارز</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>Tongible</td>
+            <td>ملموس</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>Weighted</td>
+            <td>مرجح</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>Sustained</td>
+            <td>مستدام</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>Articels of incorporation</td>
+            <td>عقد التأسيس</td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>Entity charter</td>
+            <td>ميثاق الكيان </td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>Curtailed</td>
+            <td>تقليص</td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td>Siloed</td>
+            <td>معزول</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td>Withstands</td>
+            <td>صمود</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>Objectively</td>
+            <td>موضوعي</td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td>The extent</td>
+            <td>المدى</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>Statutory</td>
+            <td>قانوني</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>Accreditation</td>
+            <td>الإعتماد</td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td>Unduly</td>
+            <td>بلا مبرر</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>Proficiency</td>
+            <td>كفاءة</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>Attributes</td>
+            <td>السمات</td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td>Detervence</td>
+            <td>الردع</td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td>Rosters</td>
+            <td>القوائم</td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td>Conduct</td>
+            <td>السلوك</td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>Context</td>
+            <td>السلوك</td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <td>Egress</td>
+            <td>الخروج</td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td>Vesting</td>
+            <td>إستحقاق</td>
+        </tr>
+        <tr>
+            <td>53</td>
+            <td>Vested</td>
+            <td>مخولة</td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td>Anarchy</td>
+            <td>فوضى</td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td>Legislative</td>
+            <td>تشريعي</td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td>Holistic</td>
+            <td>كلي</td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td>Tolerance</td>
+            <td>تسامح</td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td>Conceptual</td>
+            <td>مفاهيمي</td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td>Detrimental</td>
+            <td>ضار</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>Charter</td>
+            <td>ميثاق</td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td>Viability</td>
+            <td>الجدوى</td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td>Displacement</td>
+            <td>نزوح</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td>Reciprocal</td>
+            <td>متبادل</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td>Proportional</td>
+            <td>متناسب</td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td>Inversely</td>
+            <td>عكسي</td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td>Triage</td>
+            <td>الفرز</td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td>Sabotage</td>
+            <td>تخريب</td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td>Hazmat</td>
+            <td>المواد الخطيرة</td>
+        </tr>
+        <tr>
+            <td>69</td>
+            <td>Cascading</td>
+            <td>متتالية</td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td>Pamphlets</td>
+            <td>كتيبات</td>
+        </tr>
+        <tr>
+            <td>71</td>
+            <td>Liaison</td>
+            <td>التواصل/لاتصال</td>
+        </tr>
+        <tr>
+            <td>72</td>
+            <td>Mastery</td>
+            <td>اتقان</td>
+        </tr>
+        <tr>
+            <td>73</td>
+            <td>Leverage</td>
+            <td>إستفادة</td>
+        </tr>
+        </tr>
+    </table>
+
+    <script>
+        function searching(){
+            var input, filter, table, tr, td, i, txtValue;
+            input= document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for(i=0;i<tr.length;i++){
+                td = tr[i].getElementsByTagName("td")[1];
+                if(td){
+                    txtValue = td.textContent || td.innerText;
+                    if(txtValue.toUpperCase().indexOf(filter) > -1){
+                        tr[i].style.display="";
+                     }
+                    else{
+                        tr[i].style.display="none";
+                    }
+                }
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
